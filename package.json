@@ -2,11 +2,11 @@
   "name": "using-napi",
   "version": "1.0.0",
   "main": "index.js",
-  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node-gyp clean configure build",
-    "execute": "node --experimental-strip-types index.ts"
+    "build:linux": "npm_config_BUILD_OS=linux node-gyp clean configure build",
+    "build:mac": "npm_config_BUILD_OS=mac node-gyp clean configure build",
+    "build:windows": "SET npm_config_BUILD_OS=win && node-gyp clean configure build",
+    "execute": "npx ts-node index.ts"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +15,7 @@
   "dependencies": {
     "@types/node": "^22.13.10",
     "node-addon-api": "^8.3.1",
+    "ts-node": "^10.9.2",
     "typescript": "^5.8.2"
   }
 }

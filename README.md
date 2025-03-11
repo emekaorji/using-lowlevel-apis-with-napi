@@ -5,7 +5,17 @@
 
 ## Build
 
-> npm run build
+### Linux
+
+> npm run build:linux
+
+### MacOS
+
+> npm run build:mac
+
+### Windows
+
+> npm run build:windows
 
 ## Run
 
